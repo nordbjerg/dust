@@ -1,0 +1,4 @@
+dust
+====
+
+Easy magic methods
