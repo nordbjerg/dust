@@ -1,0 +1,23 @@
+{
+    "name": "nordbjerg/dust",
+    "description": "Easy magic methods",
+    "keywords": ["php", "utilities", "tools", "arrays", "collections", "objects", "functions"],
+    "require-dev": {
+        "phpunit/phpunit": "4.0.*"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Oliver Nordbjerg",
+            "email": "nordbjerg.oliver@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Dust\\": "src/Dust/"
+        }
+    },
+    "require": {
+        "php": ">=5.4.0"
+    }
+}
