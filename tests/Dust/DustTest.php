@@ -2,50 +2,38 @@
 class DustTest extends PHPUnit_Framework_TestCase
 {
 
+	private $dust;
+
+	public function setUp()
+	{
+		$this->dust = new Dust\Dust();
+		$this->dust->register('/^get(\w+)$/', 'get');
+	}
+
 	public function testRegister()
 	{
-		$dust = new Dust();
-
-		$dust->register('/^get(\w+)$/', 'get');
-
-		$this->assertEquals(1, count($dust->getAllPaths()));
-		$this->assertEquals(['/^get(\w+)$/' => 'get'], $dust->getAllPaths());
+		$this->assertEquals(1, count($this->dust->getAllPaths()));
+		$this->assertEquals(['/^get(\w+)$/' => 'get'], $this->dust->getAllPaths());
 	}
 
 	public function testGetMethod()
 	{
-		$dust = new Dust();
-
-		$dust->register('/^get(\w+)$/', 'get');
-
-		$this->assertEquals('get', $dust->getMethod('getCookies'));
+		$this->assertEquals('get', $this->dust->getMethod('getCookies'));
 	}
 
 	public function testGetPattern()
 	{
-		$dust = new Dust();
-
-		$dust->register('/^get(\w+)$/', 'get');
-
-		$this->assertEquals('/^get(\w+)$/', $dust->getPattern('getCookies'));
+		$this->assertEquals('/^get(\w+)$/', $this->dust->getPattern('getCookies'));
 	}
 
 	public function testGetArguments()
 	{
-		$dust = new Dust();
-
-		$dust->register('/^get(\w+)$/', 'get');
-
-		$this->assertEquals(['cookies'], $dust->getArguments('getCookies'));
+		$this->assertEquals(['cookies'], $this->dust->getArguments('getCookies'));
 	}
 
 	public function testHandle()
 	{
-		$dust = new Dust();
-
-		$dust->register('/^get(\w+)$/', 'get');
-
-		$this->assertEquals('getting cookies from jar', $dust->handle(new Dummy, 'getCookies', ['jar']));
+		$this->assertEquals('getting cookies from jar', $this->dust->handle(new Dummy, 'getCookies', ['jar']));
 	}
 
 }

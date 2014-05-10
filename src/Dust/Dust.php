@@ -84,9 +84,9 @@ class Dust {
 		$pattern = $this->getPattern($method);
 		$arguments = [];
 
-		preg_match_all($pattern, $method, $arguments)
+		preg_match_all($pattern, $method, $arguments);
 
-		return $arguments[1];
+		return array_map('strtolower', $arguments[1]);
 	}
 
 	/**
