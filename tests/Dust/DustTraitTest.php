@@ -5,7 +5,7 @@ class DustTraitTest extends PHPUnit_Framework_TestCase
 
     public function testDustInstanceIsInstanceOfDust()
     {
-        $this->assertInstanceOf('/Dust/Dust', $this->getDustInstance());
+        $this->assertInstanceOf('\Dust\Dust', $this->getDustInstance());
     }
 
     public function testSetDustInstance()
