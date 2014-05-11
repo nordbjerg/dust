@@ -6,7 +6,7 @@ class DustTest extends PHPUnit_Framework_TestCase
 
 	public function setUp()
 	{
-		$this->dust = new Dust\Dust();
+		$this->dust = new Dust\Dust;
 		$this->dust->register('/^get(\w+)$/', 'get');
 	}
 
