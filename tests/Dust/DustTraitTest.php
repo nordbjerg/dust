@@ -1,7 +1,7 @@
 <?php
 class DustTraitTest extends PHPUnit_Framework_TestCase
 {
-    use DustTrait;
+    use Dust\DustTrait;
 
     public function testDustInstanceIsInstanceOfDust()
     {
