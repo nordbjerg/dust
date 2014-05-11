@@ -1,5 +1,5 @@
 <?php
-class DustTest extends PHPUnit_Framework_TestCase
+class DustTraitTest extends PHPUnit_Framework_TestCase
 {
     use DustTrait;
 
