@@ -13,8 +13,8 @@ test:
         directory:
             - "tests/"
         args: "--stderr"
-    php_mess_detector:
-        allow_failures: true
+    #php_mess_detector:
+    #    allow_failures: true
     #php_code_sniffer:
     #    standard: "PSR2"
     php_cpd:
