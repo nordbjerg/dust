@@ -11,7 +11,7 @@ setup:
 test:
     php_unit:
         directory:
-            - "app/tests/"
+            - "tests/"
         args: "--stderr"
     php_mess_detector:
         allow_failures: true
